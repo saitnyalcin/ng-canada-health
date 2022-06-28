@@ -1,0 +1,23 @@
+<!-- Header -->
+<app-header></app-header>
+
+<div>
+  <div>
+    <!-- Skeleton Loader && Input Component-->
+    <ngx-skeleton-loader
+      class="skeleton-flex-container"
+      *ngIf="!contentLoaded"
+      count="{{ count }}"
+      [theme]="{
+        height: '50px',
+        margin: '20px'
+      }"
+    ></ngx-skeleton-loader>
+  </div>
+  <!-- Container -->
+
+  <app-card-container *ngIf="contentLoaded"></app-card-container>
+</div>
+
+<!-- Footer -->
+<app-footer></app-footer>
